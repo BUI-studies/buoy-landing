@@ -1,0 +1,84 @@
+// paragraph: Mixins
+@mixin paragraph($size: rem(16), $weight: 400, $line-height: 1, $color: #fff) {
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $line-height;
+	color: $color;
+	font-family: 'Gotham Pro', sans-serif;
+}
+
+// Button: Mixins
+@mixin button-outlined(
+	$paddingBlock: 2em,
+	$paddingInline: 1em,
+	$borderRadius: 6px,
+	$color: $typgrapgy-color,
+	$bgColor: $primary-color
+) {
+	padding: $paddingBlock $paddingInline;
+	border-radius: $borderRadius;
+	color: $color;
+	background-color: $bgColor;
+}
+
+@mixin button-outlined(
+	$paddingBlock: 2em,
+	$paddingInline: 1em,
+	$borderRadius: 6px,
+	$color: $typgrapgy-color,
+	$bgColor: $primary-bg-color,
+	$borderColor: $primary-color
+) {
+	padding: $paddingBlock $paddingInline;
+	border: 2px solid $borderColor;
+	border-radius: $borderRadius;
+	color: $color;
+	background-color: $bgColor;
+}
+
+// px to rem
+@function rem($pixels, $context: 16px) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+	@return $pixels / $context * 1rem;
+}
+
+// Simple usage FLEXBOX
+@mixin flex($horizontal: center, $vertical: center) {
+	display: flex;
+	justify-content: $horizontal;
+	align-items: $vertical;
+}
+
+// Pseudo-elem
+@mixin pseudo($location: after, $content: '', $position: static) {
+	@if ($position == absolute) {
+		position: relative;
+	}
+
+	&::#{$location} {
+		content: $content;
+		position: $position;
+		@content;
+	}
+}
+
+// add fonts
+@mixin font-face(
+	$font-family,
+	$file-path,
+	$weight: normal,
+	$style: normal,
+	$asset-pipeline: false
+) {
+	@font-face {
+		font-family: $font-family;
+		font-weight: $weight;
+		font-style: $style;
+		src: url('#{$file-path}.woff2') format('woff2');
+	}
+}
