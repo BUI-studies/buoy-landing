@@ -1,5 +1,5 @@
 // paragraph: Mixins
-@mixin paragraph($size: rem(16), $weight: 400, $line-height: 1, $color: #fff) {
+@mixin paragraph($size: 16px, $weight: 400, $line-height: 1, $color: #fff) {
 	font-size: $size;
 	font-weight: $weight;
 	line-height: $line-height;
@@ -36,16 +36,7 @@
 	background-color: $bgColor;
 }
 
-// px to rem
-@function rem($pixels, $context: 16px) {
-	@if (unitless($pixels)) {
-		$pixels: $pixels * 1px;
-	}
-	@if (unitless($context)) {
-		$context: $context * 1px;
-	}
-	@return $pixels / $context * 1rem;
-}
+
 
 // Simple usage FLEXBOX
 @mixin flex($horizontal: center, $vertical: center) {

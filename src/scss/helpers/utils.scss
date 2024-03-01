@@ -1,34 +1,34 @@
-.typography__h2 {
+.t__h2 {
 	font-family: 'Source Code Pro', monospace;
 	font-weight: 900;
-	font-size: rem(32);
-	line-height: rem(40);
+	font-size: 32px;
+	line-height: 40px;
 }
 
-.typography__h3 {
+.t__h3 {
 	font-family: 'Source Code Pro', monospace;
 	font-weight: 900;
-	font-size: rem(24);
-	line-height: rem(30);
+	font-size: 24px;
+	line-height: 30px;
 }
 
-.typography__text {
+.t__text {
 	font-family: 'Source Code Pro', monospace;
 	font-weight: 900;
-	font-size: rem(16);
-	line-height: rem(20);
+	font-size: 16px;
+	line-height: 20px;
 }
 
-.typography__text-thin {
+.t__text-thin {
     font-family: 'Source Code Pro', monospace;
     font-weight: 400;
-    font-size: rem(16);
-    line-height: rem(20);
+    font-size: 16px;
+    line-height: 20px;
 }
 
-.primary-bg {
+.bg-primary {
     background-color: $primary-bg-color;
 }
-.secondary-bg {
+.bg-secondary {
     background-color: $secondary-bg-color;
 }
