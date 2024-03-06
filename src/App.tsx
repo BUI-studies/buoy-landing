@@ -1,29 +1,17 @@
 import { useTranslation } from 'react-i18next'
 
 function App() {
-	const { t, i18n } = useTranslation()
+	const { t } = useTranslation()
 
 	return (
 		<>
 			<h1>Vite + React</h1>
 			<div className="card">
-				<p>{t('heroTitle')}</p>
+				<h2 className="t__h2">{t('heroTitle')}</h2>
 			</div>
-			<p>
-				lang:
-				<button
-					onClick={() => i18n.changeLanguage('ad')}
-					className={i18n.language === 'ad' ? 'btn-active' : ''}
-				>
-					adults
-				</button>
-				<button
-					onClick={() => i18n.changeLanguage('ch')}
-					className={i18n.language === 'ch' ? 'btn-active' : ''}
-				>
-					children
-				</button>
-			</p>
+			<div>
+				<p>ПОРУЧ ДІТИ</p>
+			</div>
 		</>
 	)
 }
