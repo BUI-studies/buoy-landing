@@ -1,33 +1,36 @@
-import { useTranslation } from "react-i18next"
-
-import "./App.css"
+// import { useTranslation } from 'react-i18next'
+import logo from './assets/logo.svg'
+import './hero.scss'
 
 function App() {
-  const { t, i18n } = useTranslation()
+	// const { t, i18n } = useTranslation()
 
-  return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <p>{t("siteTitle")}</p>
-      </div>
-      <p>
-        lang:
-        <button
-          onClick={() => i18n.changeLanguage("ad")}
-          className={i18n.language === "ad" ? "btn-active" : ""}
-        >
-          adults
-        </button>
-        <button
-          onClick={() => i18n.changeLanguage("ch")}
-          className={i18n.language === "ch" ? "btn-active" : ""}
-        >
-          children
-        </button>
-      </p>
-    </>
-  )
+	return (
+		<>
+			<section className="hero">
+				<div className="hero__container">
+					<div>
+						<div>
+							<p>ПОРУЧ ДІТИ</p>
+						</div>
+						<div>
+							<p>МЕНЮ</p>
+						</div>
+					</div>
+					<div>
+						<picture>
+							<img src={logo} alt="Main logo" />
+						</picture>
+					</div>
+					<div>
+						<h2>{/**Осюда текст з і18 */}</h2>
+						<p>{/**І сюда теж */}</p>
+						<a href="#">{/**Та і тут теж текст з і18 */}</a>
+					</div>
+				</div>
+			</section>
+		</>
+	)
 }
 
 export default App
