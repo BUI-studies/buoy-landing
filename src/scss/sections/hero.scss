@@ -1,0 +1,49 @@
+@import '../helpers/typography.scss';
+@import '../helpers/variable.scss';
+@import '../helpers/mixins.scss';
+
+.hero {
+	background-color: #001018;
+	color: #fff;
+	&__container {
+		box-sizing: border-box;
+		max-width: 1444px;
+		width: 100%;
+		padding: 3.5em 3.5em 10em 3.5em;
+		margin: 0 auto;
+	}
+	&__switch-and-menu-container {
+		@include flex(flex-end);
+		gap: 4em;
+	}
+	&__lang-switch-container,
+	&__menu-button-container {
+		display: inline-flex;
+		align-items: center;
+		gap: 1em;
+	}
+	&__menu-button {
+		cursor: pointer;
+		&:hover {
+			fill: $primary-color;
+		}
+		&:hover path {
+			stroke: $primary-bg-color;
+		}
+	}
+	&__call-to-action-btn {
+		display: inline-block;
+		padding: 1em 2em;
+		background-color: $secondary-color;
+		color: $primary-bg-color;
+		border-radius: 6px;
+	}
+	&__text-block-container {
+		border: 1px solid white;
+		margin-top: 165px;
+	}
+	&__text-block {
+		border: 1px solid red;
+		max-width: 760px;
+	}
+}
