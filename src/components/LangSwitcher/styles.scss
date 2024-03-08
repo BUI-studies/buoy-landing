@@ -1,0 +1,29 @@
+@import '../../scss/helpers/variable.scss';
+
+.lang__switcher {
+	appearance: none;
+	position: relative;
+	width: 60px;
+	height: 30px;
+	border: 1px solid $secondary-color;
+	border-radius: 100px;
+	transition: background-color 0.2s;
+	&::after {
+		position: absolute;
+		content: '';
+		top: 50%;
+		left: 25%;
+		transform: translate(-50%, -50%);
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background-color: $secondary-color;
+		transition: left 0.2s;
+	}
+	&:checked {
+		background-color: $primary-color;
+		&::after {
+			left: 75%;
+		}
+	}
+}
