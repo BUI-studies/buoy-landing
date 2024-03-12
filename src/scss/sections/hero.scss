@@ -7,7 +7,7 @@
 	color: #fff;
 	&__container {
 		box-sizing: border-box;
-		max-width: 1444px;
+		max-width: 1440px;
 		width: 100%;
 		padding: 3.5em 3.5em 10em 3.5em;
 		margin: 0 auto;
@@ -31,19 +31,35 @@
 			stroke: $primary-bg-color;
 		}
 	}
+	&__title {
+		font-family: 'Source Code Pro', monospace;
+		font-weight: 900;
+		font-size: 48px;
+		line-height: 60px;
+	}
+	&__subtitle {
+		margin-top: 2em;
+		max-width: 520px;
+		@include paragraph(16px, 400, 30px);
+	}
 	&__call-to-action-btn {
+		@include paragraph(16px, 400, 16px);
 		display: inline-block;
 		padding: 1em 2em;
+		margin-top: 2em;
 		background-color: $secondary-color;
 		color: $primary-bg-color;
 		border-radius: 6px;
+		transition: background-color 0.2s;
+		&:hover {
+			background-color: $primary-color;
+		}
 	}
 	&__text-block-container {
-		border: 1px solid white;
 		margin-top: 165px;
+		@include flex(flex-end);
 	}
 	&__text-block {
-		border: 1px solid red;
 		max-width: 760px;
 	}
 }

@@ -47,8 +47,8 @@ function App() {
 				</div>
 				<div className="hero__text-block-container">
 					<div className="hero__text-block">
-						<h2 className="t__h2 hero__title">{t('heroTitle')}</h2>
-						<p>{t('heroSubText')}</p>
+						<h2 className="hero__title">{t('heroTitle')}</h2>
+						<p className="hero__subtitle">{t('heroSubText')}</p>
 						<a href="#" className="hero__call-to-action-btn">
 							{t('heroCallToAction')}
 						</a>
