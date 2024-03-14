@@ -3,13 +3,18 @@
 @import '../helpers/mixins.scss';
 
 .hero {
+	position: relative;
 	height: 100svh;
-	background:
-		url('../../assets/bg-animation.gif') no-repeat,
-		#001018;
-	background-position: 40% 50%;
-	background-size: 718px 718px;
 	color: #fff;
+
+	&__bg-animation {
+		position: absolute;
+		z-index: -2;
+		width: 718px;
+		height: 718px;
+		top: 10%;
+		left: 25%;
+	}
 
 	&__container {
 		box-sizing: border-box;

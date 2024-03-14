@@ -1,1 +1,21 @@
-@import './helpers/'
+@import './helpers/';
+
+:root {
+	background:
+		// url('../assets/bg-animation.gif') no-repeat,
+		#001018;
+
+	// background-position: 40% 50%;
+	// background-size: 718px 718px;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.18;
+		background: url('../assets/noise_texture.svg');
+		z-index: -1;
+	}
+}

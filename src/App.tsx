@@ -1,13 +1,20 @@
 import { useTranslation } from 'react-i18next'
 import LangSwitcher from './components/LangSwitcher/LangSwitcher'
 import logo from './assets/logo.svg'
+import gifAdult from './assets/bg-animation.gif'
+import gifCh from './assets/bg-animation-ch.gif'
 import './scss/sections/hero.scss'
 
 function App() {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 
 	return (
 		<section className="hero">
+			<img
+				src={i18n.language === 'ad' ? gifAdult : gifCh}
+				alt="Background animation"
+				className="hero__bg-animation"
+			/>
 			<div className="hero__container">
 				<div className="hero__switch-and-menu-container">
 					<div className="hero__lang-switch-container">
