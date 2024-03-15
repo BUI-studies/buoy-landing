@@ -7,12 +7,28 @@
 	height: 100svh;
 	color: #fff;
 
+	&__bg-flowers {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+	}
+
 	&__bg-animation {
 		position: absolute;
 		z-index: -2;
 		width: 718px;
 		height: 718px;
 		top: 10%;
+		left: 25%;
+	}
+
+	&__bg-animation-ch {
+		position: absolute;
+		z-index: -2;
+		width: 322px;
+		height: 322px;
+		top: 60%;
 		left: 25%;
 	}
 

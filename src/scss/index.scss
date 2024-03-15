@@ -1,12 +1,9 @@
 @import './helpers/';
 
 :root {
-	background:
-		// url('../assets/bg-animation.gif') no-repeat,
-		#001018;
+	background-color: #001018;
+	position: relative;
 
-	// background-position: 40% 50%;
-	// background-size: 718px 718px;
 	&::before {
 		content: '';
 		position: absolute;
@@ -14,8 +11,8 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		opacity: 0.18;
-		background: url('../assets/noise_texture.svg');
+		opacity: 0.05;
+		background: url('../assets/noise_texture.svg') center/cover;
 		z-index: -1;
 	}
 }
