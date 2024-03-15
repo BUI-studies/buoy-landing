@@ -6,11 +6,21 @@
 	position: relative;
 	height: 100svh;
 	color: #fff;
+	overflow-x: hidden;
 
 	&__bg-flowers {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
+		z-index: -1;
+		@media screen and (max-width: 375px) {
+		}
+	}
+
+	&__bg-flowers-mobile {
+		position: absolute;
+		top: 15%;
+		right: 0;
 		z-index: -1;
 	}
 
@@ -21,6 +31,10 @@
 		height: 718px;
 		top: 10%;
 		left: 25%;
+		@media screen and (max-width: 375px) {
+			top: 15%;
+			left: -65%;
+		}
 	}
 
 	&__bg-animation-ch {
@@ -30,6 +44,9 @@
 		height: 322px;
 		top: 60%;
 		left: 25%;
+		@media screen and (max-width: 375px) {
+			display: none;
+		}
 	}
 
 	&__container {
@@ -38,6 +55,9 @@
 		width: 100%;
 		padding: 3.5em 3.5em 10em 3.5em;
 		margin: 0 auto;
+		@media screen and (min-width: 375px) and (max-width: 762px) {
+			padding: 25px 20px;
+		}
 	}
 	&__switch-and-menu-container {
 		@include flex(flex-end);
@@ -56,6 +76,12 @@
 		}
 		&:hover path {
 			stroke: $primary-bg-color;
+		}
+	}
+	&__logo {
+		max-width: 255px;
+		@media screen and (min-width: 375px) and (max-width: 762px) {
+			max-width: 190px;
 		}
 	}
 	&__title {

@@ -4,6 +4,7 @@ import logo from './assets/logo.svg'
 import gifAdult from './assets/bg-animation.gif'
 import gifCh from './assets/bg-animation-ch.gif'
 import flowers from './assets/flowers.svg'
+import flowersMobile from './assets/flowers-2.svg'
 import './scss/sections/hero.scss'
 
 function App() {
@@ -12,7 +13,12 @@ function App() {
 	return (
 		<>
 			<section className="hero">
-				{i18n.language === 'ch' && <img src={flowers} className="hero__bg-flowers" />}
+				{i18n.language === 'ch' && (
+					<img
+						src={window.innerWidth <= 375 ? flowersMobile : flowers}
+						className={window.innerWidth <= 375 ? 'hero__bg-flowers-mobile' : 'hero__bg-flowers'}
+					/>
+				)}
 				<img
 					src={i18n.language === 'ad' ? gifAdult : gifCh}
 					alt="Background animation"
@@ -52,7 +58,7 @@ function App() {
 					</div>
 					<div>
 						<picture>
-							<img src={logo} alt="Main logo" />
+							<img src={logo} alt="Main logo" className="hero__logo" />
 						</picture>
 					</div>
 					<div className="hero__text-block-container">
