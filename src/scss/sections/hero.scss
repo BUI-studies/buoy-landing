@@ -31,7 +31,7 @@
 		height: 718px;
 		top: 10%;
 		left: 25%;
-		@media screen and (max-width: 375px) {
+		@media screen and (max-width: 576px) {
 			top: 15%;
 			left: -65%;
 		}
@@ -44,7 +44,7 @@
 		height: 322px;
 		top: 60%;
 		left: 25%;
-		@media screen and (max-width: 375px) {
+		@media screen and (max-width: 576px) {
 			display: none;
 		}
 	}
@@ -55,13 +55,16 @@
 		width: 100%;
 		padding: 3.5em 3.5em 10em 3.5em;
 		margin: 0 auto;
-		@media screen and (min-width: 375px) and (max-width: 762px) {
-			padding: 25px 20px;
+		@media screen and (max-width: 576px) {
+			padding: 25px 20px 140px 20px;
 		}
 	}
 	&__switch-and-menu-container {
 		@include flex(flex-end);
 		gap: 4em;
+		@media screen and (max-width: 576px) {
+			gap: 20px;
+		}
 	}
 	&__lang-switch-container,
 	&__menu-button-container {
@@ -80,7 +83,7 @@
 	}
 	&__logo {
 		max-width: 255px;
-		@media screen and (min-width: 375px) and (max-width: 762px) {
+		@media screen and (max-width: 576px) {
 			max-width: 190px;
 		}
 	}
@@ -103,7 +106,6 @@
 		background-color: $secondary-color;
 		color: $primary-bg-color;
 		border-radius: 6px;
-		transition: background-color 0.2s;
 		&:hover {
 			background-color: $primary-color;
 		}
