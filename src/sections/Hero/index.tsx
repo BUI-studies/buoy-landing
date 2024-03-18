@@ -22,8 +22,8 @@ const Hero: FC = () => {
 			{i18n.language === 'ch' && (
 				<img
 					alt=""
-					src={window.innerWidth <= 375 ? flowersMobile : flowers}
-					className={window.innerWidth <= 375 ? 'hero__bg-flowers-mobile' : 'hero__bg-flowers'}
+					src={window.innerWidth <= 576 ? flowersMobile : flowers}
+					className={window.innerWidth <= 576 ? 'hero__bg-flowers-mobile' : 'hero__bg-flowers'}
 				/>
 			)}
 			<img

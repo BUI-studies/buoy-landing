@@ -29,9 +29,21 @@
 		height: 718px;
 		top: 10%;
 		left: 25%;
-		@media screen and (max-width: 576px) {
+		@media screen and (max-width: 375px) {
 			top: 15%;
 			left: -65%;
+		}
+		@media screen and (min-width: 376px) and (max-width: 430px) {
+			left: -50%;
+		}
+		@media screen and (min-width: 431px) and (max-width: 576px) {
+			left: -25%;
+		}
+		@media screen and (min-width: 576px) and (max-width: 992px) {
+			left: 5%;
+		}
+		@media only screen and (min-width: 993px) and (max-width: 1376px) {
+			left: 10%;
 		}
 	}
 
