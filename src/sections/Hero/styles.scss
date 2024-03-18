@@ -4,15 +4,20 @@
 
 .hero {
 	position: relative;
-	height: 100svh;
 	color: #fff;
 	overflow-x: hidden;
+	@media screen and (max-height: 1000px) {
+		height: 100svh;
+	}
 
 	&__bg-flowers {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: -1;
+		@media screen and (min-width: 768px) and (max-width: 1240px) {
+			left: 30%;
+		}
 	}
 
 	&__bg-flowers-mobile {
@@ -54,8 +59,17 @@
 		height: 322px;
 		top: 60%;
 		left: 25%;
-		@media screen and (max-width: 576px) {
+		@media screen and (max-width: 767px) {
 			display: none;
+		}
+		@media screen and (min-width: 768px) and (max-width: 1169px) {
+			left: 60%;
+		}
+		@media screen and (min-width: 1170px) and (max-width: 1400px) {
+			left: 5%;
+		}
+		@media screen and (min-width: 1401px) and (max-width: 1600px) {
+			left: 15%;
 		}
 	}
 
