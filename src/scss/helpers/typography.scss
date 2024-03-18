@@ -1,3 +1,5 @@
+@import './variable.scss';
+
 .t__h2 {
 	font-family: 'Source Code Pro', monospace;
 	font-weight: 900;
@@ -20,15 +22,15 @@
 }
 
 .t__text-thin {
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
 }
 
 .bg-primary {
-    background-color: $primary-bg-color;
+	background-color: $primary-bg-color;
 }
 .bg-secondary {
-    background-color: $secondary-bg-color;
+	background-color: $secondary-bg-color;
 }

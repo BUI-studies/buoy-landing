@@ -1,0 +1,144 @@
+@import '../../scss/helpers/typography.scss';
+@import '../../scss/helpers/variable.scss';
+@import '../../scss/helpers/mixins.scss';
+
+.hero {
+	position: relative;
+	color: #fff;
+	overflow-x: hidden;
+	@media screen and (max-height: 1000px) {
+		height: 100svh;
+	}
+
+	&__bg-flowers {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+		@media screen and (min-width: 768px) and (max-width: 1240px) {
+			left: 30%;
+		}
+	}
+
+	&__bg-flowers-mobile {
+		position: absolute;
+		top: 15%;
+		right: 0;
+		z-index: -1;
+	}
+
+	&__bg-animation {
+		position: absolute;
+		z-index: -2;
+		width: 718px;
+		height: 718px;
+		top: 10%;
+		left: 25%;
+		@media screen and (max-width: 375px) {
+			top: 15%;
+			left: -65%;
+		}
+		@media screen and (min-width: 376px) and (max-width: 430px) {
+			left: -50%;
+		}
+		@media screen and (min-width: 431px) and (max-width: 576px) {
+			left: -25%;
+		}
+		@media screen and (min-width: 576px) and (max-width: 992px) {
+			left: 5%;
+		}
+		@media only screen and (min-width: 993px) and (max-width: 1376px) {
+			left: 10%;
+		}
+	}
+
+	&__bg-animation-ch {
+		position: absolute;
+		z-index: -2;
+		width: 322px;
+		height: 322px;
+		top: 60%;
+		left: 25%;
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
+		@media screen and (min-width: 768px) and (max-width: 1169px) {
+			left: 60%;
+		}
+		@media screen and (min-width: 1170px) and (max-width: 1400px) {
+			left: 5%;
+		}
+		@media screen and (min-width: 1401px) and (max-width: 1600px) {
+			left: 15%;
+		}
+	}
+
+	&__container {
+		box-sizing: border-box;
+		max-width: 1440px;
+		width: 100%;
+		padding: 3.5em 3.5em 10em 3.5em;
+		margin: 0 auto;
+		@media screen and (max-width: 576px) {
+			padding: 25px 20px 140px 20px;
+		}
+	}
+	&__switch-and-menu-container {
+		@include flex(flex-end);
+		gap: 4em;
+		@media screen and (max-width: 576px) {
+			gap: 20px;
+		}
+	}
+	&__lang-switch-container,
+	&__menu-button-container {
+		display: inline-flex;
+		align-items: center;
+		gap: 1em;
+	}
+	&__menu-button {
+		cursor: pointer;
+		&:hover {
+			fill: $primary-color;
+		}
+		&:hover path {
+			stroke: $primary-bg-color;
+		}
+	}
+	&__logo {
+		max-width: 255px;
+		@media screen and (max-width: 576px) {
+			max-width: 190px;
+		}
+	}
+	&__title {
+		font-family: 'Source Code Pro', monospace;
+		font-weight: 900;
+		font-size: 48px;
+		line-height: 60px;
+	}
+	&__subtitle {
+		margin-top: 2em;
+		max-width: 520px;
+		@include paragraph(16px, 400, 30px);
+	}
+	&__call-to-action-btn {
+		@include paragraph(16px, 400, 16px);
+		display: inline-block;
+		padding: 1em 2em;
+		margin-top: 2em;
+		background-color: $secondary-color;
+		color: $primary-bg-color;
+		border-radius: 6px;
+		&:hover {
+			background-color: $primary-color;
+		}
+	}
+	&__text-block-container {
+		margin-top: 165px;
+		@include flex(flex-end);
+	}
+	&__text-block {
+		max-width: 760px;
+	}
+}

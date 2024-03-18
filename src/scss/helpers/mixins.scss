@@ -36,8 +36,6 @@
 	background-color: $bgColor;
 }
 
-
-
 // Simple usage FLEXBOX
 @mixin flex($horizontal: center, $vertical: center) {
 	display: flex;
