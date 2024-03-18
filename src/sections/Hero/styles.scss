@@ -1,6 +1,6 @@
-@import '../helpers/typography.scss';
-@import '../helpers/variable.scss';
-@import '../helpers/mixins.scss';
+@import '../../scss/helpers/typography.scss';
+@import '../../scss/helpers/variable.scss';
+@import '../../scss/helpers/mixins.scss';
 
 .hero {
 	position: relative;
@@ -13,8 +13,6 @@
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: -1;
-		@media screen and (max-width: 375px) {
-		}
 	}
 
 	&__bg-flowers-mobile {
