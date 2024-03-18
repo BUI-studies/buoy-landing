@@ -11,6 +11,12 @@ import './styles.scss'
 const Hero: FC = () => {
 	const { t, i18n } = useTranslation()
 
+	const getCurrentGif = () => {
+		if (i18n.language === 'ad') {
+			return gifAdult
+		} else return gifCh
+	}
+
 	return (
 		<section className="hero">
 			{i18n.language === 'ch' && (
@@ -21,7 +27,7 @@ const Hero: FC = () => {
 				/>
 			)}
 			<img
-				src={i18n.language === 'ad' ? gifAdult : gifCh}
+				src={getCurrentGif()}
 				alt="Background animation"
 				className={i18n.language === 'ad' ? 'hero__bg-animation' : 'hero__bg-animation-ch'}
 			/>
