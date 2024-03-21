@@ -1,0 +1,83 @@
+@import '../../scss/helpers/mixins.scss';
+@import '../../scss/helpers/typography.scss';
+@import '../../scss/helpers/variable.scss';
+
+#root {
+	position: relative;
+}
+
+.modal-wrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	@include flex();
+	background-color: rgba(0, 0, 0, 0.35);
+	backdrop-filter: blur(3px);
+}
+
+.menu {
+	max-width: 1105px;
+	max-height: 735px;
+	width: 100%;
+	height: 100%;
+	padding: 3.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: $primary-color;
+	color: $typography-color;
+	&__close-btn-container {
+		@include flex(flex-end);
+		gap: 1em;
+	}
+	&__close-btn {
+		&:hover {
+			cursor: pointer;
+			fill: $primary-bg-color;
+			path {
+				stroke: $primary-color;
+			}
+		}
+	}
+	&__list-container {
+		@include flex();
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+
+		&-item-link {
+			color: $typography-color;
+			display: inline-block;
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				transform: scaleX(0);
+				height: 2px;
+				bottom: 0;
+				left: 0;
+				background-color: $typography-color;
+				transform-origin: bottom right;
+				transition: transform 0.25s ease-out;
+			}
+			&:hover::after {
+				transform: scaleX(1);
+				transform-origin: bottom left;
+			}
+		}
+	}
+	&__social-links-container {
+		display: flex;
+		gap: 2em;
+		justify-content: center;
+	}
+	&__social-link {
+		color: $typography-color;
+	}
+}
