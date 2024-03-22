@@ -29,11 +29,34 @@
 	justify-content: space-between;
 	background-color: $primary-color;
 	color: $typography-color;
+	@media screen and (max-width: 576px) {
+		max-width: 335px;
+		max-height: 515px;
+		padding: 1em 1em 80px 1em;
+	}
+	@media only screen and (min-width: 577px) and (max-width: 768px) {
+		max-width: 435px;
+	}
+	@media only screen and (min-width: 769px) and (max-width: 992px) {
+		max-width: 535px;
+	}
+	@media only screen and (min-width: 993px) and (max-width: 1200px) {
+		max-width: 635px;
+	}
+	@media only screen and (min-width: 1201px) and (max-width: 1367px) {
+		max-width: 935px;
+	}
 	&__close-btn-container {
 		@include flex(flex-end);
 		gap: 1em;
+		@media screen and (max-width: 576px) {
+			gap: 13px;
+		}
 	}
 	&__close-btn {
+		@media screen and (max-width: 576px) {
+			width: 65px;
+		}
 		&:hover {
 			cursor: pointer;
 			fill: $primary-bg-color;
@@ -49,11 +72,17 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2em;
+		@media screen and (max-width: 576px) {
+			gap: 1em;
+		}
 
 		&-item-link {
 			color: $typography-color;
 			display: inline-block;
 			position: relative;
+			@media screen and (max-width: 576px) {
+				font-size: 24px;
+			}
 			&::after {
 				content: '';
 				position: absolute;
@@ -73,11 +102,13 @@
 		}
 	}
 	&__social-links-container {
-		display: flex;
+		@include flex();
 		gap: 2em;
-		justify-content: center;
 	}
 	&__social-link {
 		color: $typography-color;
+		@media screen and (max-width: 576px) {
+			font-size: 14px;
+		}
 	}
 }
