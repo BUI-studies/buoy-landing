@@ -130,6 +130,7 @@
 		background-color: $secondary-color;
 		color: $primary-bg-color;
 		border-radius: 6px;
+		transition-duration: 0.2s;
 		&:hover {
 			background-color: $primary-color;
 		}
