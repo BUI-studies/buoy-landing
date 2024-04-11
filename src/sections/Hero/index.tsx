@@ -21,7 +21,7 @@ const Hero: FC = () => {
 		<section className="hero">
 			{i18n.language === 'ch' && (
 				<img
-					alt=""
+					alt="Hand drawn flowers"
 					src={window.innerWidth <= 767 ? flowersMobile : flowers}
 					className={window.innerWidth <= 767 ? 'hero__bg-flowers-mobile' : 'hero__bg-flowers'}
 				/>
@@ -32,12 +32,12 @@ const Hero: FC = () => {
 				className={i18n.language === 'ad' ? 'hero__bg-animation' : 'hero__bg-animation-ch'}
 			/>
 			<div className="hero__container">
-				<div className="hero__switch-and-menu-container">
-					<div className="hero__lang-switch-container">
+				<div className="hero__header">
+					<div className="hero__switcher">
 						<p className="t__text-thin">ПОРУЧ ДІТИ</p>
 						<LangSwitcher />
 					</div>
-					<div className="hero__menu-button-container">
+					<div className="hero__menu">
 						<p className="t__text-thin">МЕНЮ</p>
 						<svg
 							className="hero__menu-button"
