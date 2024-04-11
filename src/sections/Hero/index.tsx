@@ -68,7 +68,7 @@ const Hero: FC = () => {
 						<img src={logo} alt="Main logo" className="hero__logo" />
 					</picture>
 				</div>
-				<div className="hero__text-block-container">
+				<div className="hero__info">
 					<div className="hero__text-block">
 						<h2 className="hero__title">{t('heroTitle')}</h2>
 						<p className="hero__subtitle">{t('heroSubText')}</p>

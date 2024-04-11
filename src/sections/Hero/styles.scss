@@ -77,17 +77,15 @@
 		box-sizing: border-box;
 		max-width: 1440px;
 		width: 100%;
-		padding: 3.5em 3.5em 10em 3.5em;
 		margin: 0 auto;
-		@media screen and (max-width: 576px) {
-			padding: 25px 20px 140px 20px;
-		}
 	}
 	&__header {
+		padding: 3.5em 3.5em 0 3.5em;
 		@include flex(flex-end);
 		gap: 4em;
 		@media screen and (max-width: 576px) {
 			gap: 20px;
+			padding: 25px 20px 0 20px;
 		}
 	}
 	&__switcher,
@@ -106,9 +104,11 @@
 		}
 	}
 	&__logo {
+		padding-left: 3.5em;
 		max-width: 255px;
 		@media screen and (max-width: 576px) {
 			max-width: 190px;
+			padding-left: 20px;
 		}
 	}
 	&__title {
@@ -134,9 +134,13 @@
 			background-color: $primary-color;
 		}
 	}
-	&__text-block-container {
+	&__info {
 		margin-top: 165px;
+		padding: 3.5em 3.5em 0 3.5em;
 		@include flex(flex-end);
+		@media screen and (max-width: 576px) {
+			padding: 25px 20px 140px 20px;
+		}
 	}
 	&__text-block {
 		max-width: 760px;
