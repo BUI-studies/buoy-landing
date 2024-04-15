@@ -20,11 +20,14 @@ const Hero: FC = () => {
 	return (
 		<section className="hero">
 			{i18n.language === 'ch' && (
-				<img
-					alt="Hand drawn flowers"
-					src={window.innerWidth <= 767 ? flowersMobile : flowers}
-					className={window.innerWidth <= 767 ? 'hero__bg-flowers-mobile' : 'hero__bg-flowers'}
-				/>
+				<picture>
+					<source media="(max-width: 766px)" srcSet={flowersMobile} />
+					<img
+						alt="Hand drawn flowers"
+						src={flowers}
+						className={window.innerWidth <= 767 ? 'hero__bg-flowers-mobile' : 'hero__bg-flowers'}
+					/>
+				</picture>
 			)}
 			<img
 				src={getCurrentGif()}
