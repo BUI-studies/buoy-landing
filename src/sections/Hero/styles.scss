@@ -6,10 +6,22 @@
 	position: relative;
 	color: #fff;
 	overflow-x: hidden;
-	@media screen and (max-height: 1000px) {
-		height: 100svh;
+	&__adult-background {
+		background-image: url('../../assets/bg-animation.gif');
+		background-repeat: no-repeat;
+		background-size: 718px auto;
+		background-position: center;
 	}
 
+	&__kids-background {
+		background-image: url('../../assets/bg-animation-ch.gif');
+		background-repeat: no-repeat;
+		background-size: 322px auto;
+		background-position: 25% 100%;
+		@media screen and (min-width: 768px) and (max-width: 1169px) {
+			background-position: bottom right;
+		}
+	}
 	&__bg-flowers {
 		position: absolute;
 		left: 50%;
@@ -19,57 +31,11 @@
 			left: 30%;
 		}
 	}
-
 	&__bg-flowers-mobile {
 		position: absolute;
 		top: 15%;
 		right: 0;
 		z-index: -1;
-	}
-
-	&__bg-animation {
-		position: absolute;
-		z-index: -2;
-		width: 718px;
-		top: 10%;
-		left: 25%;
-		@media screen and (max-width: 375px) {
-			top: 15%;
-			left: -65%;
-		}
-		@media screen and (min-width: 376px) and (max-width: 430px) {
-			left: -50%;
-		}
-		@media screen and (min-width: 431px) and (max-width: 576px) {
-			left: -25%;
-		}
-		@media screen and (min-width: 576px) and (max-width: 992px) {
-			left: 5%;
-		}
-		@media only screen and (min-width: 993px) and (max-width: 1376px) {
-			left: 10%;
-		}
-	}
-
-	&__bg-animation-ch {
-		position: absolute;
-		z-index: -2;
-		width: 322px;
-		height: 322px;
-		top: 60%;
-		left: 25%;
-		@media screen and (max-width: 767px) {
-			display: none;
-		}
-		@media screen and (min-width: 768px) and (max-width: 1169px) {
-			left: 60%;
-		}
-		@media screen and (min-width: 1170px) and (max-width: 1400px) {
-			left: 5%;
-		}
-		@media screen and (min-width: 1401px) and (max-width: 1600px) {
-			left: 15%;
-		}
 	}
 
 	&__container {
@@ -142,6 +108,7 @@
 	&__info {
 		max-width: 760px;
 		margin-top: 165px;
+		margin-bottom: 160px;
 		margin-left: auto;
 		padding: 3.5em 3.5em 0 3.5em;
 		@media screen and (max-width: 576px) {

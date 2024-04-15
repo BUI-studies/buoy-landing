@@ -11,14 +11,8 @@ import './styles.scss'
 const Hero: FC = () => {
 	const { t, i18n } = useTranslation()
 
-	const getCurrentGif = () => {
-		if (i18n.language === 'ad') {
-			return gifAdult
-		} else return gifCh
-	}
-
 	return (
-		<section className="hero">
+		<section className={`hero hero__${t('background')}`}>
 			{i18n.language === 'ch' && (
 				<picture>
 					<source media="(max-width: 766px)" srcSet={flowersMobile} />
@@ -29,11 +23,6 @@ const Hero: FC = () => {
 					/>
 				</picture>
 			)}
-			<img
-				src={getCurrentGif()}
-				alt="Background animation"
-				className={i18n.language === 'ad' ? 'hero__bg-animation' : 'hero__bg-animation-ch'}
-			/>
 			<div className="hero__container">
 				<div className="hero__header">
 					<div className="hero__switcher">
