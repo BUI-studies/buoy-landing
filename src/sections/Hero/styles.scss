@@ -31,7 +31,6 @@
 		position: absolute;
 		z-index: -2;
 		width: 718px;
-		height: 718px;
 		top: 10%;
 		left: 25%;
 		@media screen and (max-width: 375px) {
@@ -136,14 +135,12 @@
 		}
 	}
 	&__info {
+		max-width: 760px;
 		margin-top: 165px;
+		margin-left: auto;
 		padding: 3.5em 3.5em 0 3.5em;
-		@include flex(flex-end);
 		@media screen and (max-width: 576px) {
 			padding: 25px 20px 140px 20px;
 		}
-	}
-	&__text-block {
-		max-width: 760px;
 	}
 }

@@ -66,19 +66,15 @@ const Hero: FC = () => {
 						</svg>
 					</div>
 				</div>
-				<div>
-					<picture>
-						<img src={logo} alt="Main logo" className="hero__logo" />
-					</picture>
-				</div>
+				<picture>
+					<img src={logo} alt="Main logo" className="hero__logo" />
+				</picture>
 				<div className="hero__info">
-					<div className="hero__text-block">
-						<h2 className="hero__title">{t('heroTitle')}</h2>
-						<p className="hero__subtitle">{t('heroSubText')}</p>
-						<a href="#" className="hero__call-to-action-btn">
-							{t('heroCallToAction')}
-						</a>
-					</div>
+					<h2 className="hero__title">{t('heroTitle')}</h2>
+					<p className="hero__subtitle">{t('heroSubText')}</p>
+					<a href="#" className="hero__call-to-action-btn">
+						{t('heroCallToAction')}
+					</a>
 				</div>
 			</div>
 		</section>
