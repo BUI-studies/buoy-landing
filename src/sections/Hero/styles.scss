@@ -95,11 +95,16 @@
 	}
 	&__menu-button {
 		cursor: pointer;
+		transition: all 0.2s;
+		border-radius: 50%;
 		&:hover {
-			fill: $primary-color;
+			background-color: $primary-color;
 		}
 		&:hover path {
 			stroke: $primary-bg-color;
+		}
+		& path {
+			transition: all 0.2s;
 		}
 	}
 	&__logo {
