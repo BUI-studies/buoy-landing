@@ -3,10 +3,8 @@
 @import '../../scss/helpers/mixins.scss';
 
 .hero {
-	height: 100svh;
 	position: relative;
 	color: #fff;
-	overflow-x: hidden;
 	&__adult-background {
 		background-image: url('../../assets/bg-animation.gif');
 		background-repeat: no-repeat;
@@ -21,6 +19,9 @@
 		background-position: 25% 100%;
 		@media screen and (min-width: 768px) and (max-width: 1169px) {
 			background-position: bottom right;
+		}
+		@media screen and (max-width: 767px) {
+			background-image: none;
 		}
 	}
 	&__bg-flowers {
@@ -109,11 +110,11 @@
 	&__info {
 		max-width: 760px;
 		margin-top: 165px;
-		margin-bottom: 160px;
 		margin-left: auto;
-		padding: 3.5em 3.5em 0 3.5em;
+		padding: 3.5em 3.5em 10em 3.5em;
 		@media screen and (max-width: 576px) {
 			padding: 25px 20px 140px 20px;
+			margin-top: 185px;
 		}
 	}
 }
