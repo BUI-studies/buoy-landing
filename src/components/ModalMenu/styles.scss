@@ -16,6 +16,7 @@
 	@include flex();
 	background-color: rgba(0, 0, 0, 0.35);
 	backdrop-filter: blur(3px);
+	animation: smoothAppear 0.2s;
 }
 
 .menu {
@@ -29,6 +30,7 @@
 	justify-content: space-between;
 	background-color: $primary-color;
 	color: $typography-color;
+	animation: bouncyAppear 0.3s;
 	@media screen and (max-width: 576px) {
 		max-width: 335px;
 		max-height: 515px;
@@ -54,15 +56,20 @@
 		}
 	}
 	&__close-btn {
-		@media screen and (max-width: 576px) {
-			width: 65px;
-		}
+		cursor: pointer;
+		transition: all 0.2s;
+		border-radius: 50%;
 		&:hover {
-			cursor: pointer;
-			fill: $primary-bg-color;
+			background-color: $primary-bg-color;
 			path {
 				stroke: $primary-color;
 			}
+			& path {
+				transition: all 0.2s;
+			}
+		}
+		@media screen and (max-width: 576px) {
+			width: 65px;
 		}
 	}
 	&__list-container {
@@ -110,5 +117,30 @@
 		@media screen and (max-width: 576px) {
 			font-size: 14px;
 		}
+	}
+}
+
+@keyframes smoothAppear {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes bouncyAppear {
+	0% {
+		transform: translateY(-50px);
+	}
+	33% {
+		transform: translateY(20px);
+	}
+	66% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }
