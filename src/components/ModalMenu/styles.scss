@@ -1,0 +1,140 @@
+@import '../../scss/helpers/mixins.scss';
+@import '../../scss/helpers/typography.scss';
+@import '../../scss/helpers/variable.scss';
+
+.modal-wrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	@include flex();
+	background-color: rgba(0, 0, 0, 0.35);
+	backdrop-filter: blur(3px);
+	animation: smoothAppear 0.2s;
+}
+
+.menu {
+	max-width: 1105px;
+	width: 100%;
+	padding: 3.5em;
+	background-color: $primary-color;
+	color: $typography-color;
+	animation: bouncy 0.3s;
+	@media screen and (max-width: 576px) {
+		max-width: 335px;
+		padding: 1em 1em 80px 1em;
+	}
+	@media only screen and (min-width: 577px) and (max-width: 768px) {
+		max-width: 435px;
+	}
+	@media only screen and (min-width: 769px) and (max-width: 992px) {
+		max-width: 535px;
+	}
+	@media only screen and (min-width: 993px) and (max-width: 1200px) {
+		max-width: 635px;
+	}
+	@media only screen and (min-width: 1201px) and (max-width: 1367px) {
+		max-width: 935px;
+	}
+	&__close {
+		@include flex(flex-end);
+		gap: 1em;
+		@media screen and (max-width: 576px) {
+			gap: 13px;
+		}
+	}
+	&__close-btn {
+		cursor: pointer;
+		transition: all 0.2s;
+		border-radius: 50%;
+		&:hover {
+			background-color: $primary-bg-color;
+			path {
+				stroke: $primary-color;
+			}
+			& path {
+				transition: all 0.2s;
+			}
+		}
+	}
+	&__list-container {
+		@include flex();
+		margin-top: 105px;
+		margin-bottom: 165px;
+		@media screen and (max-width: 576px) {
+			margin-top: 65px;
+			margin-bottom: 65px;
+		}
+		@media screen and (max-height: 761px) {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+	}
+	&__list {
+		&-item:not(:first-child) {
+			margin-top: 2em;
+			@media screen and (max-width: 576px) {
+				margin-top: 1em;
+			}
+		}
+		&-link {
+			color: $typography-color;
+			position: relative;
+			@media screen and (max-width: 576px) {
+				font-size: 24px;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				transform: scaleX(0);
+				height: 2px;
+				bottom: 0;
+				left: 0;
+				background-color: $typography-color;
+				transform-origin: bottom right;
+				transition: transform 0.25s ease-out;
+			}
+			&:hover::after {
+				transform: scaleX(1);
+				transform-origin: bottom left;
+			}
+		}
+	}
+	&__socials {
+		@include flex();
+		gap: 2em;
+	}
+	&__social-link {
+		color: $typography-color;
+		@media screen and (max-width: 576px) {
+			font-size: 14px;
+		}
+	}
+}
+
+@keyframes smoothAppear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes bouncy {
+	0% {
+		transform: translateY(-50px);
+	}
+	33% {
+		transform: translateY(20px);
+	}
+	66% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

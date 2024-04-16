@@ -1,13 +1,16 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import LangSwitcher from '../../components/LangSwitcher/LangSwitcher'
+import { LangSwitcher, ModalMenu } from '../../components'
 import logo from '../../assets/logo.svg'
 import flowers from '../../assets/flowers.svg'
 import flowersMobile from '../../assets/flowers-2.svg'
 import './styles.scss'
 
 const Hero: FC = () => {
+	const [menuVisible, setMenuVisible] = useState<boolean>(false)
 	const { t, i18n } = useTranslation()
+
+	const handleMenuOpen = () => setMenuVisible(true)
 
 	return (
 		<section className={`hero hero__${t('background')}`}>
@@ -30,6 +33,7 @@ const Hero: FC = () => {
 					<div className="hero__menu">
 						<p className="t__text-thin">МЕНЮ</p>
 						<svg
+							onClick={handleMenuOpen}
 							className="hero__menu-button"
 							width="81"
 							height="80"
@@ -53,6 +57,7 @@ const Hero: FC = () => {
 						</svg>
 					</div>
 				</div>
+				{menuVisible && <ModalMenu setVisible={setMenuVisible} />}
 				<picture>
 					<img src={logo} alt="Main logo" className="hero__logo" />
 				</picture>
