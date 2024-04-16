@@ -1,0 +1,119 @@
+@import '../../scss/helpers/typography.scss';
+@import '../../scss/helpers/variable.scss';
+@import '../../scss/helpers/mixins.scss';
+
+.hero {
+	height: 100svh;
+	position: relative;
+	color: #fff;
+	overflow-x: hidden;
+	&__adult-background {
+		background-image: url('../../assets/bg-animation.gif');
+		background-repeat: no-repeat;
+		background-size: 718px auto;
+		background-position: center;
+	}
+
+	&__kids-background {
+		background-image: url('../../assets/bg-animation-ch.gif');
+		background-repeat: no-repeat;
+		background-size: 322px auto;
+		background-position: 25% 100%;
+		@media screen and (min-width: 768px) and (max-width: 1169px) {
+			background-position: bottom right;
+		}
+	}
+	&__bg-flowers {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+		@media screen and (min-width: 768px) and (max-width: 1240px) {
+			left: 30%;
+		}
+	}
+	&__bg-flowers-mobile {
+		position: absolute;
+		top: 15%;
+		right: 0;
+		z-index: -1;
+	}
+
+	&__container {
+		box-sizing: border-box;
+		max-width: 1440px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	&__header {
+		padding: 3.5em 3.5em 0 3.5em;
+		@include flex(flex-end);
+		gap: 4em;
+		@media screen and (max-width: 576px) {
+			gap: 20px;
+			padding: 25px 20px 0 20px;
+		}
+	}
+	&__switcher,
+	&__menu {
+		display: inline-flex;
+		align-items: center;
+		gap: 1em;
+	}
+	&__menu-button {
+		cursor: pointer;
+		transition: all 0.2s;
+		border-radius: 50%;
+		&:hover {
+			background-color: $primary-color;
+		}
+		&:hover path {
+			stroke: $primary-bg-color;
+		}
+		& path {
+			transition: all 0.2s;
+		}
+	}
+	&__logo {
+		padding-left: 3.5em;
+		max-width: 255px;
+		@media screen and (max-width: 576px) {
+			max-width: 190px;
+			padding-left: 20px;
+		}
+	}
+	&__title {
+		font-family: 'Source Code Pro', monospace;
+		font-weight: 900;
+		font-size: 48px;
+		line-height: 60px;
+	}
+	&__subtitle {
+		margin-top: 2em;
+		max-width: 520px;
+		@include paragraph(16px, 400, 30px);
+	}
+	&__call-to-action-btn {
+		@include paragraph(16px, 400, 16px);
+		display: inline-block;
+		padding: 1em 2em;
+		margin-top: 2em;
+		background-color: $secondary-color;
+		color: $primary-bg-color;
+		border-radius: 6px;
+		transition-duration: 0.2s;
+		&:hover {
+			background-color: $primary-color;
+		}
+	}
+	&__info {
+		max-width: 760px;
+		margin-top: 165px;
+		margin-bottom: 160px;
+		margin-left: auto;
+		padding: 3.5em 3.5em 0 3.5em;
+		@media screen and (max-width: 576px) {
+			padding: 25px 20px 140px 20px;
+		}
+	}
+}
