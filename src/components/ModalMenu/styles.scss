@@ -62,9 +62,6 @@
 				transition: all 0.2s;
 			}
 		}
-		@media screen and (max-width: 576px) {
-			width: 65px;
-		}
 	}
 	&__list-container {
 		@include flex();
