@@ -1,18 +1,17 @@
-import { Dispatch, FC, SetStateAction } from 'react'
+import { FC } from 'react'
+import { ModalMenuPropTypes } from './types'
 import './styles.scss'
 
-interface ModalMenuProps {
-	setVisible: Dispatch<SetStateAction<boolean>>
-}
+const ModalMenu: FC<ModalMenuPropTypes> = ({ setVisible }) => {
+	const handleClose = () => setVisible(false)
 
-const ModalMenu: FC<ModalMenuProps> = ({ setVisible }) => {
 	return (
 		<div className="modal-wrapper">
 			<div className="menu">
-				<div className="menu__close-btn-container">
+				<div className="menu__close">
 					<p className="t__text-thin">ЗАКРИТИ</p>
 					<svg
-						onClick={() => setVisible(false)}
+						onClick={handleClose}
 						className="menu__close-btn"
 						width="80"
 						height="80"
@@ -33,28 +32,28 @@ const ModalMenu: FC<ModalMenuProps> = ({ setVisible }) => {
 				<div className="menu__list-container">
 					<ul className="menu__list">
 						<li className="menu__list-item active">
-							<a href="#" className="t__menu-item menu__list-item-link">
+							<a href="#" className="t__menu-item menu__list-link">
 								Головна
 							</a>
 						</li>
 						<li className="menu__list-item">
-							<a href="#" className="t__menu-item menu__list-item-link">
+							<a href="#" className="t__menu-item menu__list-link">
 								Безкоштовні уроки
 							</a>
 						</li>
 						<li className="menu__list-item">
-							<a href="#" className="t__menu-item menu__list-item-link">
+							<a href="#" className="t__menu-item menu__list-link">
 								Особистий кабінет
 							</a>
 						</li>
 						<li className="menu__list-item">
-							<a href="#" className="t__menu-item menu__list-item-link">
+							<a href="#" className="t__menu-item menu__list-link">
 								Контакти
 							</a>
 						</li>
 					</ul>
 				</div>
-				<div className="menu__social-links-container">
+				<div className="menu__socials">
 					<a
 						href="https://t.me/bui_studies"
 						target="_blank"
