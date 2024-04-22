@@ -1,0 +1,119 @@
+@import '../../scss/helpers/typography.scss';
+@import '../../scss/helpers/variable.scss';
+@import '../../scss/helpers/mixins.scss';
+
+.study-format {
+	color: #fff;
+	&__container {
+		box-sizing: border-box;
+		max-width: 1440px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	&__header {
+		text-align: center;
+		margin-top: 100px;
+	}
+	&__cards {
+		margin-top: 60px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1em;
+	}
+	&__free,
+	&__paid {
+		//quick and dirty solution
+		display: grid;
+		justify-items: center;
+		padding: 2em;
+		max-width: 450px;
+		box-sizing: border-box;
+		background-color: $secondary-bg-color;
+		border-radius: 6px;
+	}
+	&__free {
+		justify-self: end;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+	&__paid {
+		border: 1px solid $primary-color;
+	}
+	&__pricing {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		color: $primary-color;
+	}
+	&__summary {
+		max-width: 317px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	&__free-list,
+	&__paid-list {
+		margin-top: 24px;
+		margin-bottom: 24px;
+		li {
+			padding-left: 13px;
+		}
+		li:not(:first-child) {
+			margin-top: 0.5em;
+		}
+	}
+	&__free-list {
+		list-style: '❌';
+		li:nth-child(-n + 3) {
+			list-style: '✅';
+		}
+	}
+	&__paid-list {
+		list-style: '✅';
+	}
+	&__yt-link,
+	&__mentors-link {
+		//quick and dirty solution
+		display: flex;
+		gap: 12px;
+		padding: 1em 2em;
+		border: 2px solid #ff8700;
+		border-radius: 6px;
+		color: #fff;
+	}
+	&__yt-link {
+		transition: 0.2s;
+		&:hover {
+			background-color: $primary-color;
+			border-color: $primary-color;
+			color: $typography-color;
+		}
+	}
+	&__mentors-link {
+		background-color: #ff8700;
+		color: $typography-color;
+		transition: 0.2s;
+		&:hover {
+			background-color: $primary-color;
+			border-color: $primary-color;
+		}
+	}
+	&__notice {
+		max-width: 775px;
+		margin: 60px auto 100px auto;
+		display: flex;
+		gap: 2em;
+		span {
+			padding: 16px;
+			border-radius: 32px;
+			font-size: 24px;
+			line-height: 24px;
+			background-color: $primary-color;
+			color: $primary-bg-color;
+			user-select: none;
+		}
+		p {
+			max-width: 555px;
+			padding-top: 10px;
+			font-size: 24px;
+			line-height: 24px;
+		}
+	}
+}
