@@ -3,8 +3,9 @@
 @import '../../scss/helpers/mixins.scss';
 
 .hero {
-	position: relative;
 	color: #fff;
+	width: 100svw;
+	height: 100svh;
 	&__adult-background {
 		background-image: url('../../assets/bg-animation.gif');
 		background-repeat: no-repeat;
@@ -111,9 +112,9 @@
 		max-width: 760px;
 		margin-top: 165px;
 		margin-left: auto;
-		padding: 3.5em 3.5em 10em 3.5em;
+		padding: 3.5em 3.5em 0 3.5em;
 		@media screen and (max-width: 576px) {
-			padding: 25px 20px 140px 20px;
+			padding: 25px 20px 0 20px;
 			margin-top: 185px;
 		}
 	}

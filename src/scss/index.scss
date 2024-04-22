@@ -1,18 +1,6 @@
 @import './helpers/';
 
 :root {
-	background-color: #001018;
-	position: relative;
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0.05;
-		background: url('../assets/noise_texture.svg') center/cover;
-		z-index: -1;
-	}
+	background-color: $primary-bg-color;
+	scrollbar-width: none;
 }
