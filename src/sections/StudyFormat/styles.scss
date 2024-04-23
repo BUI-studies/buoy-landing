@@ -13,7 +13,7 @@
 	&__header {
 		text-align: center;
 		margin-top: 100px;
-		@media screen and (max-width: 375px) {
+		@media screen and (width < 950px) {
 			margin-top: 80px;
 		}
 	}
@@ -22,9 +22,10 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(336px, 1fr));
 		gap: 1em;
-		@media screen and (max-width: 375px) {
+		@media screen and (width < 950px) {
 			margin-top: 32px;
 			justify-items: center;
+			padding: 0 1em;
 		}
 	}
 	&__free,
@@ -38,7 +39,7 @@
 		box-sizing: border-box;
 		background-color: $secondary-bg-color;
 		border-radius: 6px;
-		@media screen and (max-width: 375px) {
+		@media screen and (width < 950px) {
 			max-width: 335px;
 			padding: 24px;
 		}
@@ -46,7 +47,7 @@
 	&__free {
 		justify-self: end;
 		border: 1px solid rgba(255, 255, 255, 0.2);
-		@media screen and (max-width: 375px) {
+		@media screen and (width < 950px) {
 			justify-self: center;
 		}
 	}
@@ -84,7 +85,7 @@
 		li:not(:first-child) {
 			margin-top: 0.5em;
 		}
-		@media screen and (max-width: 375px) {
+		@media screen and (width < 950px) {
 			margin-left: 24px;
 		}
 	}
@@ -131,7 +132,7 @@
 		display: flex;
 		align-items: flex-start;
 		gap: 2em;
-		@media screen and (max-width: 375px) {
+		@media screen and (width < 950px) {
 			padding: 0 20px;
 			gap: 1em;
 			margin: 32px auto 80px auto;
@@ -147,7 +148,7 @@
 			font-size: 24px;
 			font-weight: 500;
 			line-height: 24px;
-			@media screen and (max-width: 375px) {
+			@media screen and (width < 950px) {
 				font-size: 20px;
 				line-height: 20px;
 			}
@@ -155,7 +156,7 @@
 		p {
 			max-width: 555px;
 			padding-top: 10px;
-			@media screen and (max-width: 375px) {
+			@media screen and (width < 950px) {
 				font-size: 20px;
 				line-height: 30px;
 				text-align: left;
