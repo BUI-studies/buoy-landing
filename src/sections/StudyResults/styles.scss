@@ -13,20 +13,26 @@
 	&__header {
 		text-align: center;
 		margin-top: 100px;
-		@media screen and (width < 950px) {
+		@media screen and (width < 1000px) {
 			margin-top: 80px;
 		}
 	}
 	&__cards {
 		position: relative;
 		max-width: 1330px;
-		margin: 100px auto 60px auto;
+		box-sizing: border-box;
+		margin: 100px 60px 60px 60px;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		justify-items: center;
 		gap: 1em;
 		background-color: $secondary-bg-color;
 		border-radius: 6px;
+		@media screen and (width < 1000px) {
+			max-width: 335px;
+			padding: 77px 16px;
+			margin: 100px auto 60px auto;
+		}
 		&::after {
 			content: ' ';
 			position: absolute;
@@ -36,6 +42,16 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			@media screen and (width < 1000px) {
+				transform: rotate(-90deg);
+				top: 40%;
+			}
+		}
+	}
+	&__name {
+		@media screen and (width < 1000px) {
+			font-size: 20px;
+			line-height: 25px;
 		}
 	}
 	&__free,
@@ -45,9 +61,16 @@
 		box-sizing: border-box;
 		max-width: 655px;
 		padding: 2em 0 2em 0;
+		@media screen and (width < 1000px) {
+			max-width: 335px;
+		}
 	}
+	// &__paid {
+	// 	border-top: 2px solid #2f3a3f;
+	// }
 	&__free-list,
 	&__paid-list {
+		box-sizing: border-box;
 		max-width: 375px;
 		margin-top: 32px;
 		li:not(:first-child) {
@@ -55,6 +78,11 @@
 		}
 		li {
 			padding-left: 13px;
+			word-wrap: break-word;
+		}
+		@media screen and (width < 1000px) {
+			max-width: 277px;
+			font-size: 13px;
 		}
 	}
 	&__free-list {
