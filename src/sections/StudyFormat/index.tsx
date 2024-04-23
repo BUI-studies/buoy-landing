@@ -33,7 +33,9 @@ const StudyFormat: FC = () => {
 					</div>
 					<div className="study-format__paid">
 						<h3 className="t__h3">Я з багатої сім’ї</h3>
-						<p className="study-format__pricing t__secondary-text">Скікись грн/міс*</p>
+						<p className="study-format__pricing study-format__pricing--paid t__secondary-text">
+							Скікись грн/міс*
+						</p>
 						<p className="study-format__summary t__secondary-text">
 							Не виходить вчитись самому, дамо тобі няньку, яка попу підітре, купуй нижче
 						</p>
@@ -47,6 +49,9 @@ const StudyFormat: FC = () => {
 						<a href="#" className="study-format__mentors-link t__secondary-text">
 							Знайти свого ментора
 						</a>
+						<div className="tooltip">
+							*Ментор відповідає з Пн-Пт в робочі години, або за згодою сторін.
+						</div>
 					</div>
 				</div>
 				<div className="study-format__notice">

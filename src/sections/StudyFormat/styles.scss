@@ -36,12 +36,21 @@
 		border: 1px solid rgba(255, 255, 255, 0.2);
 	}
 	&__paid {
+		position: relative;
 		border: 1px solid $primary-color;
+		&:hover {
+			.tooltip {
+				visibility: visible;
+			}
+		}
 	}
 	&__pricing {
 		margin-top: 1em;
 		margin-bottom: 1em;
 		color: $primary-color;
+		&--paid {
+			text-decoration: underline;
+		}
 	}
 	&__summary {
 		text-align: center;
@@ -83,9 +92,7 @@
 	&__yt-link {
 		transition: 0.2s;
 		&:hover {
-			background-color: $primary-color;
-			border-color: $primary-color;
-			color: $typography-color;
+			background-color: rgba(255, 255, 255, 0.1);
 		}
 	}
 	&__mentors-link {
@@ -118,5 +125,36 @@
 			max-width: 555px;
 			padding-top: 10px;
 		}
+	}
+}
+
+.tooltip {
+	position: absolute;
+	visibility: hidden;
+	top: 10%;
+	right: -320px;
+	max-width: 270px;
+	padding: 1em 1em 1em 1.2em;
+	background-color: #fff;
+	color: $typography-color;
+	border: 1px solid $primary-color;
+	border-radius: 6px;
+	font-family: Gotham Pro;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	text-align: left;
+	&::after {
+		content: ' ';
+		position: absolute;
+		top: 16px;
+		left: -14px;
+		border-bottom-left-radius: 6px;
+		border-left: 1px solid $primary-color;
+		border-bottom: 1px solid $primary-color;
+		width: 25px;
+		height: 25px;
+		background-color: #fff;
+		transform: rotate(45deg);
 	}
 }
