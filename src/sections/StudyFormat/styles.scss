@@ -40,8 +40,7 @@
 		border: 1px solid $primary-color;
 		&:hover {
 			.tooltip {
-				visibility: visible;
-				opacity: 1;
+				display: block;
 			}
 		}
 	}
@@ -112,15 +111,15 @@
 		gap: 2em;
 		span {
 			height: min-content;
-			font-family: 'Gotham Pro';
-			font-weight: 500;
 			padding: 16px;
 			border-radius: 32px;
-			font-size: 24px;
-			line-height: 24px;
 			background-color: $primary-color;
 			color: $primary-bg-color;
 			user-select: none;
+			font-family: 'Gotham Pro';
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 24px;
 		}
 		p {
 			max-width: 555px;
@@ -131,12 +130,11 @@
 
 .tooltip {
 	position: absolute;
-	visibility: collapse;
-	opacity: 0;
-	top: 10%;
-	right: -320px;
+	display: none;
 	max-width: 270px;
 	padding: 1em 1em 1em 1.2em;
+	top: 10%;
+	right: -320px;
 	background-color: #fff;
 	color: $typography-color;
 	border: 1px solid $primary-color;
@@ -146,7 +144,6 @@
 	font-weight: 400;
 	line-height: 18px;
 	text-align: left;
-	transition: opacity 0.2s ease;
 	&::after {
 		content: ' ';
 		position: absolute;
