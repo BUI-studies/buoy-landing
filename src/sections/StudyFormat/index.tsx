@@ -11,7 +11,7 @@ const StudyFormat: FC = () => {
 				<h2 className="study-format__header t__h2">Формати навчання</h2>
 				<div className="study-format__cards">
 					<div className="study-format__free">
-						<h3 className="t__h3">Безкоштовний курс на ютуб</h3>
+						<h3 className="study-format__name t__h3">Безкоштовний курс на ютуб</h3>
 						<p className="study-format__pricing t__secondary-text">Абсолютлі 0 грн</p>
 						<p className="study-format__summary t__secondary-text">
 							Якийсь мєлкий текст, де сказано, що навіть безкоштовні уроки дають дохуя корисного
@@ -59,7 +59,7 @@ const StudyFormat: FC = () => {
 						Шось про <img src={smallArrow} alt="Small arrow" />
 					</span>
 					<p className="t__notice-text">
-						навчаєшся в своєму темпі, маєш маєш всі необхідні матеріали, але сам відповідаєш за свої
+						навчаєшся в своєму темпі, маєш всі необхідні матеріали, але сам відповідаєш за свої
 						досягнення
 					</p>
 				</div>
