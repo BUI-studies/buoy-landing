@@ -144,7 +144,7 @@
 			background-color: $primary-color;
 			color: $primary-bg-color;
 			user-select: none;
-			font-family: 'Gotham Pro';
+			font-family: 'Gotham Pro', monospace;
 			font-size: 24px;
 			font-weight: 500;
 			line-height: 24px;
@@ -176,7 +176,7 @@
 	color: $typography-color;
 	border: 1px solid $primary-color;
 	border-radius: 6px;
-	font-family: Gotham Pro;
+	font-family: 'Gotham Pro', monospace;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 18px;
