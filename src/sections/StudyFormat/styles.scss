@@ -41,6 +41,7 @@
 		&:hover {
 			.tooltip {
 				visibility: visible;
+				opacity: 1;
 			}
 		}
 	}
@@ -130,7 +131,8 @@
 
 .tooltip {
 	position: absolute;
-	visibility: hidden;
+	visibility: collapse;
+	opacity: 0;
 	top: 10%;
 	right: -320px;
 	max-width: 270px;
@@ -144,6 +146,7 @@
 	font-weight: 400;
 	line-height: 18px;
 	text-align: left;
+	transition: opacity 0.2s ease;
 	&::after {
 		content: ' ';
 		position: absolute;
