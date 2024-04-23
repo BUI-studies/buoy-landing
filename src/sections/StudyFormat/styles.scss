@@ -1,4 +1,3 @@
-@import '../../scss/helpers/typography.scss';
 @import '../../scss/helpers/variable.scss';
 @import '../../scss/helpers/mixins.scss';
 
@@ -52,13 +51,7 @@
 		}
 	}
 	&__paid {
-		position: relative;
 		border: 1px solid $primary-color;
-		&:hover {
-			.tooltip {
-				display: block;
-			}
-		}
 	}
 	&__name {
 		text-align: center;
@@ -118,12 +111,18 @@
 		}
 	}
 	&__mentors-link {
+		position: relative;
 		background-color: #ff8700;
 		color: $typography-color;
 		transition: 0.2s;
 		&:hover {
 			background-color: $primary-color;
 			border-color: $primary-color;
+			@media screen and (width > 1380px) {
+				.tooltip {
+					display: block;
+				}
+			}
 		}
 	}
 	&__notice {
@@ -170,7 +169,7 @@
 	display: none;
 	max-width: 270px;
 	padding: 1em 1em 1em 1.2em;
-	top: 10%;
+	top: -10%;
 	right: -320px;
 	background-color: #fff;
 	color: $typography-color;

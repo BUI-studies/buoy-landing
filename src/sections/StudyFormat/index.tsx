@@ -48,10 +48,10 @@ const StudyFormat: FC = () => {
 						</ul>
 						<a href="#" className="study-format__mentors-link t__secondary-text">
 							Знайти свого ментора
+							<div className="tooltip">
+								*Ментор відповідає з Пн-Пт в робочі години, або за згодою сторін.
+							</div>
 						</a>
-						<div className="tooltip">
-							*Ментор відповідає з Пн-Пт в робочі години, або за згодою сторін.
-						</div>
 					</div>
 				</div>
 				<div className="study-format__notice">

@@ -1,4 +1,3 @@
-@import '../../scss/helpers/typography.scss';
 @import '../../scss/helpers/variable.scss';
 @import '../../scss/helpers/mixins.scss';
 
@@ -65,9 +64,6 @@
 			max-width: 335px;
 		}
 	}
-	// &__paid {
-	// 	border-top: 2px solid #2f3a3f;
-	// }
 	&__free-list,
 	&__paid-list {
 		box-sizing: border-box;
@@ -101,14 +97,13 @@
 		width: 94px;
 		height: 94px;
 		top: -47px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flex();
 		border-radius: 50%;
 		border: 3px solid $primary-bg-color;
 		background-color: $secondary-bg-color;
 		p {
 			font-size: 36px;
+			user-select: none;
 		}
 	}
 }
