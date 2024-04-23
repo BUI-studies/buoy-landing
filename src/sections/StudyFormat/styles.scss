@@ -44,7 +44,6 @@
 		color: $primary-color;
 	}
 	&__summary {
-		max-width: 317px;
 		text-align: center;
 		margin: 0 auto;
 	}
@@ -61,8 +60,10 @@
 	}
 	&__free-list {
 		list-style: '❌';
-		li:nth-child(-n + 3) {
+		color: #8b9194;
+		li:nth-child(-n + 2) {
 			list-style: '✅';
+			color: #fff;
 		}
 	}
 	&__paid-list {
@@ -77,6 +78,7 @@
 		border: 2px solid #ff8700;
 		border-radius: 6px;
 		color: #fff;
+		font-weight: 500;
 	}
 	&__yt-link {
 		transition: 0.2s;
@@ -101,6 +103,9 @@
 		display: flex;
 		gap: 2em;
 		span {
+			height: min-content;
+			font-family: 'Gotham Pro';
+			font-weight: 500;
 			padding: 16px;
 			border-radius: 32px;
 			font-size: 24px;
@@ -112,8 +117,6 @@
 		p {
 			max-width: 555px;
 			padding-top: 10px;
-			font-size: 24px;
-			line-height: 24px;
 		}
 	}
 }
