@@ -1,0 +1,86 @@
+@import '../../scss/helpers/typography.scss';
+@import '../../scss/helpers/variable.scss';
+@import '../../scss/helpers/mixins.scss';
+
+.study-results {
+	color: #fff;
+	&__container {
+		box-sizing: border-box;
+		max-width: 1440px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	&__header {
+		text-align: center;
+		margin-top: 100px;
+		@media screen and (width < 950px) {
+			margin-top: 80px;
+		}
+	}
+	&__cards {
+		position: relative;
+		max-width: 1330px;
+		margin: 100px auto 60px auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+		justify-items: center;
+		gap: 1em;
+		background-color: $secondary-bg-color;
+		border-radius: 6px;
+		&::after {
+			content: ' ';
+			position: absolute;
+			background-color: #2f3a3f;
+			width: 2px;
+			height: 170px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&__free,
+	&__paid {
+		display: grid;
+		justify-items: center;
+		box-sizing: border-box;
+		max-width: 655px;
+		padding: 2em 0 2em 0;
+	}
+	&__free-list,
+	&__paid-list {
+		max-width: 375px;
+		margin-top: 32px;
+		li:not(:first-child) {
+			margin-top: 0.5em;
+		}
+		li {
+			padding-left: 13px;
+		}
+	}
+	&__free-list {
+		list-style: '❌';
+		color: #8b9194;
+		li:nth-child(-n + 2) {
+			list-style: '✅';
+			color: #fff;
+		}
+	}
+	&__paid-list {
+		list-style: '✅';
+	}
+	&__chalice {
+		position: absolute;
+		width: 94px;
+		height: 94px;
+		top: -47px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		border: 3px solid $primary-bg-color;
+		background-color: $secondary-bg-color;
+		p {
+			font-size: 36px;
+		}
+	}
+}
