@@ -5,7 +5,7 @@ import './styles.scss'
 const StudyResults: FC = () => {
 	return (
 		<section className="study-results">
-			<div className="study-results__container">
+			<div className="container">
 				<h2 className="study-results__header t__h2">Результат після навчання</h2>
 				<div className="study-results__cards">
 					<div className="study-results__free">

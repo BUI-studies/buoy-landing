@@ -1,14 +1,9 @@
 @import '../../scss/helpers/variable.scss';
 @import '../../scss/helpers/mixins.scss';
 
-.study-format {
+.course {
 	color: #fff;
-	&__container {
-		box-sizing: border-box;
-		max-width: 1440px;
-		width: 100%;
-		margin: 0 auto;
-	}
+
 	&__header {
 		text-align: center;
 		margin-top: 100px;
