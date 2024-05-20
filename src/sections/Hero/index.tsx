@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { LangSwitcher, ModalMenu } from '../../components'
 import logo from '../../assets/logo.svg'
@@ -9,6 +9,10 @@ import './styles.scss'
 const Hero: FC = () => {
 	const [menuVisible, setMenuVisible] = useState<boolean>(false)
 	const { t, i18n } = useTranslation()
+
+	useEffect(() => {
+		document.body.style.overflowY = menuVisible ? 'hidden' : 'auto'
+	}, [menuVisible])
 
 	const handleMenuOpen = () => setMenuVisible(true)
 
@@ -57,7 +61,6 @@ const Hero: FC = () => {
 						</svg>
 					</div>
 				</div>
-				{menuVisible && <ModalMenu setVisible={setMenuVisible} />}
 				<picture>
 					<img src={logo} alt="Main logo" className="hero__logo" />
 				</picture>
@@ -69,6 +72,7 @@ const Hero: FC = () => {
 					</a>
 				</div>
 			</div>
+			{menuVisible && <ModalMenu setVisible={setMenuVisible} />}
 		</section>
 	)
 }

@@ -3,7 +3,6 @@
 @import '../../scss/helpers/mixins.scss';
 
 .hero {
-	position: relative;
 	color: #fff;
 	&__adult-background {
 		background-image: url('../../assets/bg-animation.gif');
@@ -101,6 +100,7 @@
 		margin-top: 2em;
 		background-color: $secondary-color;
 		color: $primary-bg-color;
+		font-weight: 500;
 		border-radius: 6px;
 		transition-duration: 0.2s;
 		&:hover {
@@ -111,9 +111,10 @@
 		max-width: 760px;
 		margin-top: 165px;
 		margin-left: auto;
-		padding: 3.5em 3.5em 10em 3.5em;
+		margin-bottom: 160px;
+		padding: 3.5em 3.5em 0 3.5em;
 		@media screen and (max-width: 576px) {
-			padding: 25px 20px 140px 20px;
+			padding: 25px 20px 0 20px;
 			margin-top: 185px;
 		}
 	}
